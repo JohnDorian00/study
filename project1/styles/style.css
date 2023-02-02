@@ -43,6 +43,7 @@ a {
   max-height: 756px;
   /* выше установили ограничения для секции */
   position: relative;
+  overflow: hidden;
 }
   .header__title{
     font-weight: 600;
@@ -90,6 +91,8 @@ a {
     width: 568px;
     height: 568px;
     background: #2F80ED;
+
+    animation: spin 60s infinite linear;
   }
     .header__square-pic_place_header {
     position: absolute;
@@ -370,27 +373,24 @@ a {
     }
 
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-}
-
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
 }
-
 .section-title_theme_dark {
   color: #FFFFFF;
 }
-
 .section-subtitle_theme_dark {
   color: #FFFFFF;
 }
-
 .footer__author_theme_dark {
   color: #FFFFFF;
+}
+
+
+@keyframes spin {
+  0%  {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }
